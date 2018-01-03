@@ -1,3 +1,4 @@
+import org.apache.jena.query.Dataset;
 import org.apache.jena.tdb.TDBFactory;
 
 
@@ -8,7 +9,7 @@ public class DataLinking {
 	{
 		String file=args[0];
 		String directory=args[1];
-		org.apache.jena.query.Dataset d=TDBFactory.createDataset(directory);
+		Dataset d=TDBFactory.createDataset(directory);
 		
 		
 	}
