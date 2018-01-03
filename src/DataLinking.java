@@ -17,8 +17,10 @@ import org.apache.jena.tdb.TDBFactory;
 public class DataLinking {
 
 	public static void main(String[] args) {
-		String file = args[0];
-		String directory = args[1];
+		//String file = args[0];
+		//String directory = args[1];
+		String directory="";
+		String file="";
 		Dataset d = TDBFactory.createDataset(directory);
 		Model model = d.getDefaultModel();
 
