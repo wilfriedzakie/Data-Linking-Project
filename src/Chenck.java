@@ -1,4 +1,4 @@
-//Jsut to check
+//Just to check
 public class Chenck {
 
 }
