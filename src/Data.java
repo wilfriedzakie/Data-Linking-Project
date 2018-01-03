@@ -17,7 +17,7 @@ import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.sparql.core.Quad;
 
 public class Data {
-
+	public static Dataset d;
 	public Dataset createDataset(String file, String directory) {
 		try {
 			Dataset dataset = TDBFactory.createDataset(directory);
@@ -32,6 +32,16 @@ public class Data {
 			System.out.println(ex.getMessage());
 			return null;
 		}
+	}
+	
+	public static void main(String args[])
+	{
+			//String file = args[0];
+				//String directory = args[1];
+				String directory="";
+				String file="";
+				d = TDBFactory.createDataset(directory);
+				Model model = d.getDefaultModel();
 	}
 
 }
