@@ -19,7 +19,8 @@ public class DataLinking {
 	public static void main(String[] args) {
 		
 		Data data=new Data();
-		Dataset d= data.d;
+		Dataset d= data.d1;
+		
 		
 		d.begin(ReadWrite.READ);
 		try {
