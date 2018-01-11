@@ -36,8 +36,9 @@ public static Dataset createDataset(String file, String directory)
 		dataset.begin(ReadWrite.WRITE) ; 
 		Model model= dataset.getDefaultModel();
 		TDBLoader.loadModel(model, file);
+		System.out.println(model);
 		dataset.commit();
-		System.out.println("Done");
+		
 		dataset.end();
 		
 		return dataset; 
