@@ -6,7 +6,7 @@ import com.wcohen.ss.api.StringWrapper;
 
 public class SimilarityAlgo {
 	/**
-	*La liste des algorithmes de calcul de similarite que <br/>
+	 *La liste des algorithmes de calcul de similarite que <br/>
 	 * nous considerons (cf. Cohen, String distance)
 	 */
 	private static enum Algorithms {

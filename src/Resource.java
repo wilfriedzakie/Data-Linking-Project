@@ -5,7 +5,6 @@ import java.util.*;
 
 import org.apache.jena.rdf.model.RDFNode;
 
-
 public class Resource {
 	
 	/**Resource name*/

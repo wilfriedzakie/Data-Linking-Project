@@ -3,7 +3,6 @@
  * */
 import java.io.*;
 import java.util.*;
-
 import javax.management.Query;
 import javax.xml.parsers.ParserConfigurationException;
 import org.apache.jena.query.Dataset;

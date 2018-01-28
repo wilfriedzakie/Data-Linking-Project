@@ -108,7 +108,7 @@ public class PreProcessData {
 		return onto1;
 	}
 
-	
+	 
 	public String getOnto2() {
 		return onto2;
 	}
