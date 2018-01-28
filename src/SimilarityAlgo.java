@@ -19,7 +19,7 @@ public class SimilarityAlgo {
 		algorithmInstances = new HashMap<String, AbstractStringDistance>();
 	}
 
-	public AbstractStringDistance getAlgorithm(String algoName) {
+	 public AbstractStringDistance getAlgorithm(String algoName) {
 		if (!algorithmInstances.containsKey(algoName)) {
 			AbstractStringDistance algo;
 			switch (Algorithms.valueOf(algoName)) {

@@ -70,7 +70,7 @@ public class DataLinking {
 					if (!elements.containsKey(subject.toString())) {
 						Resource resource = new Resource();
 						resource.setName(subject.toString());
-						if (object.isResource()) {
+		 				if (object.isResource()) {
 							Map<String, String> prop_val = getResourceRelations(object, d, onto);
 							for (String n : prop_val.keySet())
 								resource.setRelatValue(prop_val.get(n));
