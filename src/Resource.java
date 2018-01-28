@@ -1,4 +1,5 @@
-/**This class stores resources information such as their name and the literals related to them 
+/**
+*This class stores resources information such as their name and the literals related to them 
  * */
 import java.util.*;
 

@@ -1,3 +1,6 @@
+/**
+ * this is the main class of the program computing the	alignment and evaluation
+ * */
 import java.io.*;
 import java.util.*;
 

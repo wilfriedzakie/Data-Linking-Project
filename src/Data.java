@@ -1,4 +1,5 @@
-/**This class create graph dataset from 2 RDF files
+/**
+ * *This class create graph dataset from 2 RDF files
  * **/
 
 import java.io.InputStream;
@@ -30,7 +31,8 @@ public class Data {
 	static Dataset d1;
 	static Dataset d2;
 
-	/** Use Jena API built in function to create RDF graph **/
+	/**
+	 * * Use Jena API built in function to create RDF graph **/
 	private static Dataset dataset_creation(String file, String directory) {
 		try {
 			Dataset dataset = TDBFactory.createDataset(directory);
@@ -63,7 +65,8 @@ public class Data {
 		 d2 = dataset_creation(file2,directory2);
 	     
 	 }
-	/** Create 2 dataset for each rdf file */
+	/** 
+	 * Create 2 dataset for each rdf file */
 	public void createDataset(String file1, String file2, String directory1, String directory2) {
 		d1 = dataset_creation(file1, directory1);
 		d2 = dataset_creation(file2, directory2);

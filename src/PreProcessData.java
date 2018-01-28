@@ -29,6 +29,8 @@ import org.xml.sax.SAXException;
 
 import davi_withoutclusters.newDiscoverNonKeys5Almost;
 
+/**
+ * Thiis class preprocess the input files*/
 public class PreProcessData { 
 	
 	String onto1=new String();
