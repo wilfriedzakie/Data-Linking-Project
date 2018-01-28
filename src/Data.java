@@ -67,7 +67,7 @@ public class Data {
 	 }
 	/** 
 	 * Create 2 dataset for each rdf file */
-	public void createDataset(String file1, String file2, String directory1, String directory2) {
+	 public void createDataset(String file1, String file2, String directory1, String directory2) {
 		d1 = dataset_creation(file1, directory1);
 		d2 = dataset_creation(file2, directory2);
 	}

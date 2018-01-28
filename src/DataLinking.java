@@ -6,7 +6,6 @@ import java.util.*;
 
 import javax.management.Query;
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
