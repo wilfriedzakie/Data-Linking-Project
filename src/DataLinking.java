@@ -251,9 +251,10 @@ public static Map<String, String> mapping(Map<String, Resource> onto1_elements,M
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ParserConfigurationException, SAXException {
 
-
-		String file = "D:\\Informatiion integration\\PR-1\\Inputfiles/inputFile1.txt";
-
+		
+		//String file = "D:\\Informatiion integration\\PR-1\\Inputfiles/inputFile1.txt";
+		
+		String file =args[0];
 		PreProcessData p = new PreProcessData(file);
 
 		String pathResult=p.getOutputPath();

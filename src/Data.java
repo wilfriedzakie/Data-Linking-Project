@@ -59,8 +59,8 @@ public class Data {
 	
 	 public static void main(String args[]) throws FileNotFoundException, IOException {
 		 
-		 //String file=args[0];
-		 String file="D:\\Informatiion integration\\PR-1/inputFile.txt";
+		 String file=args[0];
+		 //String file="D:\\Informatiion integration\\PR-1/inputFile.txt";
 		 ArrayList<String> list=new ArrayList<>();
 		 
 		 try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -74,15 +74,10 @@ public class Data {
 		 String outputfile=list.get(7);
 		 String file1=list.get(2);
 		 String file2=list.get(2);
-		 
-		 
-		 
-		// String outputfile="D://Informatiion integration//PR-1/Output";
-	   //String file = args[0]; //String directory = args[1]; 
-		 //String file1="D:\\Informatiion integration\\PR-1\\person1\\person11.rdf"; 
+		 	 
+
 		 String directory1=outputfile+"/db_1";
 		 d1 =dataset_creation(file1,directory1); 
-		 //String file2="D:\\Informatiion integration\\PR-1\\person1/person11.rdf"; 
 		 
 		 String directory2=outputfile+"/db_2"; 
 		 d2 = dataset_creation(file2,directory2);
