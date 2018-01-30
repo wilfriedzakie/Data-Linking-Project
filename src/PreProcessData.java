@@ -29,23 +29,20 @@ import org.xml.sax.SAXException;
 
 import davi_withoutclusters.newDiscoverNonKeys5Almost;
 
-/**
- * Thiis class preprocess the input files*/
 public class PreProcessData { 
 	
 	String onto1=new String();
 	String onto2=new String();
-	String rdfFile1=new String();
-	String rdfFile2=new String();
+
 	String outputPath=new String();
 	String goldStandardPath=new String();
 	
 	String dataset1=new String();
 	String dataset2=new String();
 	
-	  ArrayList<String> keys=new ArrayList<String>();
+	ArrayList<String> keys=new ArrayList<String>();
 	
-	 public  PreProcessData (String file) throws FileNotFoundException, IOException, ParserConfigurationException, SAXException {
+	public  PreProcessData (String file) throws FileNotFoundException, IOException, ParserConfigurationException, SAXException {
 		
 		List<String> list=new ArrayList<String>();
 		
@@ -58,80 +55,60 @@ public class PreProcessData {
 		
 		onto1="onto: "+list.get(1);
 		
-		onto2="onto: "+list.get(7);
+		onto2="onto: "+list.get(4);
 		
-		rdfFile1=list.get(4);
-		rdfFile2=list.get(10);
-		
-		goldStandardPath=list.get(13);
-		outputPath=list.get(16);
+		goldStandardPath=list.get(7);
+		outputPath=list.get(10);
 		
 		//Parse goldStandard and get new 
 		goldStandardPath= convertXML(goldStandardPath, outputPath);
 		
-		dataset1=outputPath+"db_1/";
-		dataset2=outputPath+"db_2/";
-		
-		//dataset_creation(rdfFile1,dataset1 );
-		//dataset_creation(rdfFile2,dataset2 );
-		
-	
+		dataset1=outputPath+"db1/";
+		dataset2=outputPath+"db2/";	
 			
 	}
-
-	public String getRdfFile1() {
-		return rdfFile1;
-	}
-
-	public String getRdfFile2() {
-		return rdfFile2;
-	}
-
+	
+	
+	
+	/**
+	 *  get path to dataset of the first ontology*/
 	public String getDataset1() {
 		return dataset1+"/";
 	}
 
+	/**
+	 * get path to dataset of the second ontology*/
 	public String getDataset2() {
 		return dataset2+"/";
 	}
 
+	/**
+	 * get path to Gold Standard*/
 	public String getGoldStandardPath() {
 		return goldStandardPath;
 	}
 
-
+	/** 
+	 * get path to output folder*/
 	public String getOutputPath() {
 		return outputPath;
 	}
-
+	
+	/**
+	 *  Get first ontology OWL URI*/
 	public String getOnto1() {
 		return onto1;
 	}
 
-	 
+	/**  
+	 * Get second ontology OWL URI*/
 	public String getOnto2() {
 		return onto2;
 	}
 
 
 	
-	public Dataset dataset_creation(String file, String directory) {
-		try {
-			Dataset dataset = TDBFactory.createDataset(directory);
-			dataset.begin(ReadWrite.WRITE);
-			Model model = dataset.getDefaultModel();
-			TDBLoader.loadModel(model, file);
-			System.out.println(model);
-			dataset.commit();
-			dataset.end();
-			return dataset;
-			
-		} catch (Exception ex) {
-			System.out.println("##### Error Fonction: createDataset #####");
-			System.out.println(ex.getMessage());
-			return null;
-		}
-	}
+	
 	
 /**Transform the XML gold standard to a .txt file in the form:
 	 * entity1 ----> entity2
@@ -218,8 +195,7 @@ public String convertXML(String filePath,String outputpath) throws UnsupportedEn
 			
 			for (int j =0; j<ent1.size(); j++)
 			//System.out.println(ent1.get(j) + "--->"+ ent2.get(j));
-			
-			out.write(ent1.get(j) + " ---> "+ ent2.get(j) + "\n");
+				out.write(ent1.get(j) + " ---> "+ ent2.get(j) + "\n");
 
 		}
 		return outPath;

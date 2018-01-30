@@ -6,7 +6,7 @@ import com.wcohen.ss.api.StringWrapper;
 
 public class SimilarityAlgo {
 	/**
-	 *La liste des algorithmes de calcul de similarite que <br/>
+	 * La liste des algorithmes de calcul de similarite que <br/>
 	 * nous considerons (cf. Cohen, String distance)
 	 */
 	private static enum Algorithms {
@@ -19,7 +19,7 @@ public class SimilarityAlgo {
 		algorithmInstances = new HashMap<String, AbstractStringDistance>();
 	}
 
-	 public AbstractStringDistance getAlgorithm(String algoName) {
+	public AbstractStringDistance getAlgorithm(String algoName) {
 		if (!algorithmInstances.containsKey(algoName)) {
 			AbstractStringDistance algo;
 			switch (Algorithms.valueOf(algoName)) {

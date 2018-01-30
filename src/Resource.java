@@ -1,10 +1,11 @@
-/**
-*This class stores resources information such as their name and the literals related to them 
- * */
+
 import java.util.*;
 
 import org.apache.jena.rdf.model.RDFNode;
 
+/**
+ * This class stores resources information such as their name and the literals related to them. 
+ * */
 public class Resource {
 	
 	/**Resource name*/
@@ -15,7 +16,7 @@ public class Resource {
 	
 	
 	/**Get Resource name*/
-	 public String getName() {
+	public String getName() {
 		return name;
 	}
 
