@@ -21,3 +21,6 @@ higher is the probability that these descriptions actually refer to the same obj
 
 This project presents an implementation and instructional information that
 describe the approach to match entities from two ontologies i.e Data Linking.
+
+
+See [reports](https://github.com/wilfriedzakie/Data-Linking-Project/blob/master/Report-Data-Linking-2(1).pdf) for more details 
